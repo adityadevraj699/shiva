@@ -1,0 +1,222 @@
+@import url('https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap');
+body{
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    display: grid;
+    place-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+.radar{
+    position: absolute;
+    top:19%;
+    left: 5%;
+    bottom: 0px;
+    transform: translate(-50% -50%);
+    transform: rotate(90deg);
+    margin: 0;
+    padding: 0;
+    width: 1400px;
+    height: 1400px;
+    border-radius: 50%;
+    background-color:transparent;
+    box-shadow: 0 2px 20px rgb(37, 38, 37), insert 0 10px 100px rgba(55, 55, 55, 0.5);
+    overflow: hidden;
+}
+.radar:before{
+    content: '';
+    position: absolute;
+    top: 80%;
+    left: 55%;
+    width: 10px;
+    height: 10px;
+    background-color: rgb(179, 33, 33);
+    border-radius: 50%;
+    filter: blur(2px);
+    animation: glow 1s linear infinite;
+}
+.radar:after{
+    content: '';
+    position: absolute;
+    top: 70%;
+    left: 45%;
+    width: 10px;
+    height: 10px;
+    background-color: rgb(221, 19, 19);
+    border-radius: 50%;
+    animation: glow 1s linear infinite;
+}
+.radar li:nth-child(1),
+.radar li:nth-child(2),
+.radar li:nth-child(3),
+.radar li:nth-child(4),
+.radar li:nth-child(5),
+.radar li:nth-child(6)
+{
+    list-style: none;
+    position: absolute;
+    top: 50%;
+    height: 1px;
+    width: 100%;
+    background-color: green;
+    border-radius: 50%;
+}
+.radar li:nth-child(2){
+    transform: rotate(90deg);
+}
+.radar li:nth-child(3){
+    transform: rotate(60deg);
+}
+.radar li:nth-child(4){
+    transform: rotate(-60deg);
+}
+.radar li:nth-child(5){
+    transform: rotate(30deg);
+}
+.radar li:nth-child(6){
+    transform: rotate(-30deg);
+}
+.radar li:nth-child(7),
+.radar li:nth-child(8),
+.radar li:nth-child(9),
+.radar li:nth-child(10)
+{
+    list-style: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 1px solid green;
+    background: transparent;
+    border-radius: 50%;
+}
+.radar li:nth-child(7)
+{
+    width: 280px;
+    height: 280px;
+}
+.radar li:nth-child(8)
+{
+    width: 540px;
+    height: 540px;
+}
+.radar li:nth-child(9)
+{
+    width: 840px;
+    height: 840px;
+}
+.radar li:nth-child(10)
+{
+    width: 1120px;
+    height: 1120px;
+}
+.radar li:nth-child(11)
+{
+    list-style: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 700px;
+
+    height: 700px;
+    transform-origin: top left;
+    animation: animate 8s linear infinite;
+    animation-delay: 2s;
+}
+@keyframes animate {
+    0%{
+        transform-origin: rotate(0deg);
+        background:linear-gradient(45deg, rgba(56, 221, 56, 0.351) 50%, transparent 0%);
+    }
+    25%{
+        transform: rotate(90deg);
+        transform-origin: left top;
+        background:linear-gradient(45deg, rgba(56, 221, 56, 0.351) 50%, transparent 0%);
+    }
+    50%{
+        transform: rotate(226deg);
+        transform-origin: left top;
+        background:linear-gradient(45deg, rgba(56, 221, 56, 0.351) 50%, transparent 0%);
+    }
+    75%{
+        transform: rotate(90deg);
+        background:linear-gradient(45deg, rgba(56, 221, 56, 0.351) 50%, transparent 0%);
+    }
+    100%{
+        transform: rotate(0deg);
+        background:linear-gradient(45deg, rgba(100, 236, 100, 0.356) 50%, transparent 0%);
+    }
+}
+@keyframes glow {
+    0%{
+        opacity: 0;
+    }
+    50%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+.overflow{
+    position: absolute;
+    color: white;
+    width: 100vw;
+    height: 100vh;
+    background-color: transparent;
+    color: green;
+}
+.overflow p:nth-child(1){
+    position: fixed;
+    bottom: -1.5%;
+    left: 38.8%;
+}
+.overflow p:nth-child(2){
+    position: fixed;
+    bottom: -1.5%;
+    left: 30.4%;
+}
+.overflow p:nth-child(3){
+    position: fixed;
+    bottom: -1.5%;
+    left: 20.5%;
+}
+.overflow p:nth-child(4){
+    position: fixed;
+    bottom: -1.5%;
+    left: 11.5%;
+}
+.overflow p:nth-child(5){
+    position: fixed;
+    bottom: 34%;
+    left: 11.5%;
+}
+.overflow p:nth-child(6){
+    position: fixed;
+    bottom: 63%;
+    left: 27%;
+}
+.overflow p:nth-child(7){
+    position: fixed;
+    bottom: 75%;
+    left: 48.4%;
+}
+.overflow p:nth-child(8){
+    position: fixed;
+    bottom: 64%;
+    right: 25%;
+}
+.overflow p:nth-child(9){
+    position: fixed;
+    bottom: 34.7%;
+    right: 10%;
+}
+.overflow h1{
+    position: fixed;
+    color: green;
+    font-family: "Poetsen One", sans-serif;
+    font-weight: 900;
+    left: 43.3%;
+    font-size:70px;
+}
